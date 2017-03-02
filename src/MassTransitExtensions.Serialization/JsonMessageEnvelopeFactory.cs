@@ -1,6 +1,6 @@
-﻿using MassTransit;
+﻿using System;
+using MassTransit;
 using MassTransit.Serialization;
-using MassTransit.Util;
 
 namespace MassTransitExtensions.Serialization
 {
@@ -11,7 +11,7 @@ namespace MassTransitExtensions.Serialization
             var container = context.Message as MessageContainer;
             if (container == null)
             {
-                return new JsonMessageEnvelope(context, context.Message, TypeMetadataCache<T>.MessageTypeNames);
+                throw new ArgumentException("Message must be MessageContainer type");
             }
 
             var separatorIndex = container.MessageType.LastIndexOf('.');

@@ -7,7 +7,7 @@ namespace MassTransitExtensions.Serialization
     {
         public static void UseChangeMessageTypeSerializer(this IBusFactoryConfigurator configurator)
         {
-            configurator.AddBusFactorySpecification(new SetMessageSerializerBusFactorySpecification<ChangeMessageTypeSerializer>());
+            configurator.AddBusFactorySpecification(new SetMessageSerializerBusFactorySpecification<ChooseSerializer>());
         }
     }
 }

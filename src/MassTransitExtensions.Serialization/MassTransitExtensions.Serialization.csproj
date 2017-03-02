@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="BusFactoryConfiguratorExtensions.cs" />
     <Compile Include="ChangeMessageTypeSerializer.cs" />
+    <Compile Include="ChooseSerializer.cs" />
     <Compile Include="JsonMessageEnvelopeFactory.cs" />
     <Compile Include="MessageContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
